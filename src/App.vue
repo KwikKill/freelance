@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gray-900 text-white w-full overflow-x-hidden">
+  <div class="min-h-screen bg-gray-900 text-white w-full overflow-hidden">
     <!-- Animated Background Elements -->
     <div class="fixed inset-0 overflow-hidden pointer-events-none">
       <div class="floating-shapes">
@@ -66,31 +66,74 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 px-6 m-12 flex flex-col items-center gap-12 section-fade-in">
-      <h2 class="text-4xl font-bold text-center mb-16 section-title">
+    <section id="services" class="py-20 px-6 m-12 flex flex-col items-center gap-12">
+      <h2
+        class="text-4xl font-bold text-center mb-16 section-title"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         Mes Services
       </h2>
       <div class="grid md:grid-cols-3 gap-8 services-grid">
         <!-- Site Vitrine -->
-        <div class="service-card card-cyan" data-tilt>
+        <div
+          class="service-card card-cyan"
+          data-tilt
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-aos-duration="800"
+        >
           <div class="card-inner">
             <div class="card-glow"></div>
-            <div class="flex flex-row gap-4 justify-center items-center">
-              <div class="service-icon">🌐</div>
-              <h3 class="text-2xl font-bold mb-4 text-cyan-400">Site Vitrine</h3>
+            <div class="flex flex-row items-center justify-center gap-4">
+              <div
+                class="service-icon"
+                data-aos="zoom-in"
+                data-aos-delay="300"
+                data-aos-duration="600"
+              >🌐</div>
+              <h3
+                class="text-2xl font-bold mb-4 text-cyan-400"
+                data-aos="fade-right"
+                data-aos-delay="400"
+              >Site Vitrine</h3>
             </div>
-            <div class="price-tag">
+            <div
+              class="price-tag"
+              data-aos="fade-left"
+              data-aos-delay="500"
+            >
               À partir de <span class="price-highlight cyan">300€</span>
             </div>
-            <p class="text-gray-300 mb-6">
+            <p
+              class="text-gray-300 mb-6"
+              data-aos="fade-up"
+              data-aos-delay="600"
+            >
               Parfait pour les petites entreprises souhaitant une présence en ligne professionnelle et moderne.
             </p>
             <ul class="feature-list">
-              <li class="feature-item">✓ Design responsive</li>
-              <li class="feature-item">✓ Optimisation SEO</li>
-              <li class="feature-item">✓ Installation & configuration</li>
+              <li
+                class="feature-item"
+                data-aos="slide-right"
+                data-aos-delay="700"
+              >✓ Design responsive</li>
+              <li
+                class="feature-item"
+                data-aos="slide-right"
+                data-aos-delay="750"
+              >✓ Optimisation SEO</li>
+              <li
+                class="feature-item"
+                data-aos="slide-right"
+                data-aos-delay="800"
+              >✓ Installation & configuration</li>
             </ul>
-            <div class="flex justify-center">
+            <div
+              class="flex justify-center"
+              data-aos="zoom-in"
+              data-aos-delay="900"
+            >
               <button class="service-button cyan" @click="scrollToContact">
                 <span>Demander un devis</span>
                 <div class="button-ripple"></div>
@@ -100,26 +143,69 @@
         </div>
 
         <!-- E-commerce -->
-        <div class="service-card card-purple" data-tilt>
+        <div
+          class="service-card card-purple"
+          data-tilt
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="800"
+        >
           <div class="card-inner">
             <div class="card-glow"></div>
-            <div class="flex flex-row gap-4 justify-center items-center">
-              <div class="service-icon">🛒</div>
-              <h3 class="text-2xl font-bold mb-4 text-purple-400">Site E-commerce</h3>
+            <div class="flex flex-row items-center justify-center gap-4">
+              <div
+                class="service-icon"
+                data-aos="zoom-in"
+                data-aos-delay="400"
+                data-aos-duration="600"
+              >🛒</div>
+              <h3
+                class="text-2xl font-bold mb-4 text-purple-400"
+                data-aos="fade-right"
+                data-aos-delay="500"
+              >Site E-commerce</h3>
             </div>
-            <div class="price-tag">
+            <div
+              class="price-tag"
+              data-aos="fade-left"
+              data-aos-delay="600"
+            >
               À partir de <span class="price-highlight purple">650€</span>
             </div>
-            <p class="text-gray-300 mb-6">
+            <p
+              class="text-gray-300 mb-6"
+              data-aos="fade-up"
+              data-aos-delay="700"
+            >
               Solution WooCommerce complète pour vendre vos produits en ligne efficacement.
             </p>
             <ul class="feature-list">
-              <li class="feature-item">✓ Catalogue de produits</li>
-              <li class="feature-item">✓ Paiement sécurisé</li>
-              <li class="feature-item">✓ Gestion des stocks</li>
-              <li class="feature-item">✓ Formation incluse</li>
+              <li
+                class="feature-item"
+                data-aos="slide-right"
+                data-aos-delay="800"
+              >✓ Catalogue de produits</li>
+              <li
+                class="feature-item"
+                data-aos="slide-right"
+                data-aos-delay="850"
+              >✓ Paiement sécurisé</li>
+              <li
+                class="feature-item"
+                data-aos="slide-right"
+                data-aos-delay="900"
+              >✓ Gestion des stocks</li>
+              <li
+                class="feature-item"
+                data-aos="slide-right"
+                data-aos-delay="950"
+              >✓ Formation incluse</li>
             </ul>
-            <div class="flex justify-center">
+            <div
+              class="flex justify-center"
+              data-aos="zoom-in"
+              data-aos-delay="1000"
+            >
               <button class="service-button purple" @click="scrollToContact">
                 <span>Demander un devis</span>
                 <div class="button-ripple"></div>
@@ -129,26 +215,69 @@
         </div>
 
         <!-- Sur mesure -->
-        <div class="service-card card-pink" data-tilt>
+        <div
+          class="service-card card-pink"
+          data-tilt
+          data-aos="fade-up"
+          data-aos-delay="300"
+          data-aos-duration="800"
+        >
           <div class="card-inner">
             <div class="card-glow"></div>
-            <div class="flex flex-row gap-4 justify-center items-center">
-              <div class="service-icon">⚡</div>
-              <h3 class="text-2xl font-bold mb-4 text-pink-400">Site sur mesure</h3>
+            <div class="flex flex-row items-center justify-center gap-4">
+              <div
+                class="service-icon"
+                data-aos="zoom-in"
+                data-aos-delay="500"
+                data-aos-duration="600"
+              >⚡</div>
+              <h3
+                class="text-2xl font-bold mb-4 text-pink-400"
+                data-aos="fade-right"
+                data-aos-delay="600"
+              >Site sur mesure</h3>
             </div>
-            <div class="price-tag">
+            <div
+              class="price-tag"
+              data-aos="fade-left"
+              data-aos-delay="700"
+            >
               <span class="price-highlight pink">Sur devis</span>
             </div>
-            <p class="text-gray-300 mb-6">
+            <p
+              class="text-gray-300 mb-6"
+              data-aos="fade-up"
+              data-aos-delay="800"
+            >
               Développement personnalisé pour des besoins complexes et des fonctionnalités avancées.
             </p>
             <ul class="feature-list">
-              <li class="feature-item">✓ Frontend React / Vue.js</li>
-              <li class="feature-item">✓ Backend adapté</li>
-              <li class="feature-item">✓ UI/UX sur mesure</li>
-              <li class="feature-item">✓ Support technique</li>
+              <li
+                class="feature-item"
+                data-aos="slide-right"
+                data-aos-delay="900"
+              >✓ Frontend React / Vue.js</li>
+              <li
+                class="feature-item"
+                data-aos="slide-right"
+                data-aos-delay="950"
+              >✓ Backend adapté</li>
+              <li
+                class="feature-item"
+                data-aos="slide-right"
+                data-aos-delay="1000"
+              >✓ UI/UX sur mesure</li>
+              <li
+                class="feature-item"
+                data-aos="slide-right"
+                data-aos-delay="1050"
+              >✓ Support technique</li>
             </ul>
-            <div class="flex justify-center">
+            <div
+              class="flex justify-center"
+              data-aos="zoom-in"
+              data-aos-delay="1100"
+            >
               <button class="service-button pink" @click="scrollToContact">
                 <span>Demander un devis</span>
                 <div class="button-ripple"></div>
@@ -160,19 +289,45 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="py-20 px-6 bg-gray-800/30 flex flex-col items-center gap-12 section-fade-in">
-      <h2 class="text-4xl font-bold text-center mb-16 section-title">
+    <section id="portfolio" class="py-20 px-6 bg-gray-800/30 flex flex-col items-center gap-12">
+      <h2
+        class="text-4xl font-bold text-center mb-16 section-title"
+        data-aos="fade-down"
+        data-aos-duration="1000"
+      >
         Mes créations
       </h2>
-      <div class="text-center text-gray-400 portfolio-placeholder">
-        <div class="placeholder-icon">🚧</div>
-        <p class="text-lg mb-2">Je n'ai pas encore de projets professionnels à présenter.</p>
-        <p>Revenez bientôt pour découvrir mes réalisations !</p>
+      <div
+        class="text-center text-gray-400 portfolio-placeholder"
+        data-aos="zoom-in"
+        data-aos-delay="200"
+        data-aos-duration="800"
+      >
+        <div
+          class="placeholder-icon"
+          data-aos="flip-up"
+          data-aos-delay="400"
+        >🚧</div>
+        <p
+          class="text-lg mb-2"
+          data-aos="fade-up"
+          data-aos-delay="600"
+        >Je n'ai pas encore de projets professionnels à présenter.</p>
+        <p
+          data-aos="fade-up"
+          data-aos-delay="700"
+        >Revenez bientôt pour découvrir mes réalisations !</p>
       </div>
-      <div class="text-center mt-12">
+      <div
+        class="text-center mt-12"
+        data-aos="slide-up"
+        data-aos-delay="800"
+      >
         <a
           href="https://gabriel.blaisot.org/?lang=fr&version=cyberpunk&theme=default#projects"
           class="portfolio-link"
+          data-aos="pulse"
+          data-aos-delay="1000"
         >
           <span>Voir mes projets personnels</span>
           <div class="link-arrow">→</div>
@@ -181,37 +336,65 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 px-6 flex md:flex-row flex-col items-center gap-12 justify-center section-fade-in">
-      <div class="about-image-container hidden md:block">
+    <section id="about" class="py-20 px-6 flex md:flex-row flex-col items-center gap-12 justify-center">
+      <div
+        class="about-image-container hidden md:block"
+        data-aos="slide-right"
+        data-aos-duration="1000"
+        data-aos-offset="200"
+      >
         <div class="image-frame">
           <img
             src="@/assets/icon.png"
             alt="Avatar de Gabriel Blaisot"
             class="about-image"
+            data-aos="zoom-in"
+            data-aos-delay="300"
           >
           <div class="image-glow"></div>
         </div>
       </div>
       <div class="max-w-4xl flex flex-col items-start gap-4 about-content">
-        <h2 class="text-4xl font-bold mb-6 section-title">
+        <h2
+          class="text-4xl font-bold mb-6 section-title"
+          data-aos="slide-left"
+          data-aos-duration="800"
+        >
           À propos de Moi
         </h2>
         <div class="about-text">
-          <p class="text-gray-300 mb-6 leading-relaxed paragraph-slide">
+          <p
+            class="text-gray-300 mb-6 leading-relaxed paragraph-slide"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="800"
+          >
             Développeur web freelance passionné, je me spécialise dans la création de sites web modernes et performants.
             Avec une expertise en React et Vue.js, je porte une attention particulière à l'expérience utilisateur et au design.
           </p>
-          <p class="text-gray-300 mb-8 leading-relaxed paragraph-slide">
+          <p
+            class="text-gray-300 mb-8 leading-relaxed paragraph-slide"
+            data-aos="fade-up"
+            data-aos-delay="400"
+            data-aos-duration="800"
+          >
             Disponible pour vos projets, je vous accompagne de la conception à la mise en ligne,
             en passant par le développement et l'optimisation de votre présence digitale.
           </p>
         </div>
-        <div class="flex flex-col md:flex-row items-center gap-4 mt-6 justify-center md:justify-start w-full md:w-auto about-buttons">
+        <div
+          class="flex flex-col md:flex-row items-center gap-4 mt-6 justify-center md:justify-start w-full md:w-auto about-buttons"
+          data-aos="slide-up"
+          data-aos-delay="600"
+          data-aos-duration="600"
+        >
           <a
             href="https://gabriel.blaisot.org/?lang=fr&version=cyberpunk&theme=default#about"
             target="_blank"
             rel="noopener noreferrer"
             class="about-button primary"
+            data-aos="zoom-in"
+            data-aos-delay="800"
           >
             <span>Voir mon portfolio</span>
             <div class="button-shine"></div>
@@ -221,6 +404,8 @@
             target="_blank"
             rel="noopener noreferrer"
             class="about-button secondary"
+            data-aos="zoom-in"
+            data-aos-delay="900"
           >
             <span>Télécharger mon CV</span>
             <div class="button-shine"></div>
@@ -230,14 +415,27 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 px-6 bg-gray-800/30 flex flex-col items-center gap-12 section-fade-in">
-      <h2 class="text-4xl font-bold text-center mb-16 section-title">
+    <section id="contact" class="py-20 px-6 bg-gray-800/30 flex flex-col items-center gap-12">
+      <h2
+        class="text-4xl font-bold text-center mb-16 section-title"
+        data-aos="fade-down"
+        data-aos-duration="1000"
+      >
         Contactez-moi !
       </h2>
       <div class="max-w-4xl w-full flex-1 flex flex-col md:flex-row items-start md:items-center justify-between gap-12">
-        <div class="w-full contact-form-container">
+        <div
+          class="w-full contact-form-container"
+          data-aos="slide-right"
+          data-aos-duration="800"
+          data-aos-offset="100"
+        >
           <form action="https://formspree.io/f/meogbwkq" method="POST" class="contact-form">
-            <div class="form-group">
+            <div
+              class="form-group"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               <label class="form-label">Nom *</label>
               <input
                 v-model="form.name"
@@ -248,7 +446,11 @@
               >
               <div class="input-glow"></div>
             </div>
-            <div class="form-group">
+            <div
+              class="form-group"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <label class="form-label">Email *</label>
               <input
                 v-model="form.email"
@@ -259,7 +461,11 @@
               >
               <div class="input-glow"></div>
             </div>
-            <div class="form-group">
+            <div
+              class="form-group"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
               <label class="form-label">Type de projet</label>
               <select
                 v-model="form.projectType"
@@ -273,7 +479,11 @@
               </select>
               <div class="input-glow"></div>
             </div>
-            <div class="form-group">
+            <div
+              class="form-group"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
               <label class="form-label">Message *</label>
               <textarea
                 v-model="form.message"
@@ -284,7 +494,13 @@
               />
               <div class="input-glow"></div>
             </div>
-            <button type="submit" class="submit-button">
+            <button
+              type="submit"
+              class="submit-button"
+              data-aos="zoom-in"
+              data-aos-delay="500"
+              data-aos-duration="600"
+            >
               <span class="button-text">Envoyer le message</span>
               <div class="button-bg"></div>
               <div class="submit-glow"></div>
@@ -295,7 +511,12 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 px-6 border-t border-gray-800 flex flex-col items-center footer-fade-in">
+    <footer
+      class="py-12 px-6 border-t border-gray-800 flex flex-col items-center"
+      data-aos="fade-up"
+      data-aos-duration="800"
+      data-aos-offset="50"
+    >
       <div class="flex flex-col md:flex-row justify-center items-center">
         <div class="mb-4 md:mb-0">
           <p class="text-gray-400">© {{ new Date().getFullYear() }} Gabriel Blaisot. Tous droits réservés.</p>
@@ -340,7 +561,25 @@
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue'
+import { ref, reactive, onMounted, onUnmounted } from 'vue'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
+// Initialize AOS on component mount
+onMounted(() => {
+  AOS.init({
+    duration: 800,
+    easing: 'ease-out-cubic',
+    once: true,
+    offset: 100,
+    delay: 0,
+    anchorPlacement: 'top-bottom'
+  })
+})
+
+onUnmounted(() => {
+  AOS.refresh()
+})
 
 // Form data
 const form = reactive({
@@ -978,6 +1217,7 @@ html {
 .service-button.pink {
   background: #db2777;
   color: white;
+  font-weight: bold;
 }
 
 .service-button:hover {
@@ -1042,7 +1282,6 @@ html {
   transition: all 0.3s ease;
   padding: 0.75rem 1.5rem;
   border: 1px solid rgba(6, 182, 212, 0.3);
-  border-radius: 0.5rem;
   background: rgba(6, 182, 212, 0.05);
 }
 
@@ -1050,7 +1289,6 @@ html {
   color: #0891b2;
   border-color: rgba(6, 182, 212, 0.6);
   background: rgba(6, 182, 212, 0.1);
-  transform: translateX(5px);
 }
 
 .link-arrow {
@@ -1130,8 +1368,8 @@ html {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   background: radial-gradient(circle, rgba(6, 182, 212, 0.3), transparent);
   border-radius: 50%;
   transform: translate(-50%, -50%);
@@ -1351,8 +1589,6 @@ html {
   bottom: -2px;
   background: linear-gradient(45deg, #06b6d4, #8b5cf6, #ec4899, #06b6d4);
   background-size: 300% 300%;
-  border-radius: 0.5rem;
-  z-index: 0;
   animation: submitGlow 3s ease-in-out infinite;
 }
 
@@ -1536,5 +1772,52 @@ html {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* AOS Custom Animations */
+[data-aos="slide-up"] {
+  transform: translate3d(0, 40px, 0);
+  opacity: 0;
+}
+
+[data-aos="slide-up"].aos-animate {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+[data-aos="pulse"] {
+  transform: scale(0.9);
+  opacity: 0.7;
+}
+
+[data-aos="pulse"].aos-animate {
+  transform: scale(1);
+  opacity: 1;
+}
+
+[data-aos="flip-up"] {
+  transform: perspective(400px) rotateX(90deg);
+  opacity: 0;
+}
+
+[data-aos="flip-up"].aos-animate {
+  transform: perspective(400px) rotateX(0deg);
+  opacity: 1;
+}
+
+/* Enhanced AOS transitions */
+.aos-init[data-aos] {
+  transition-property: transform, opacity;
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Remove old animation classes that conflict with AOS */
+.section-fade-in,
+.services-grid,
+.contact-form-container,
+.about-image-container,
+.about-content,
+.footer-fade-in {
+  /* Remove old animations, AOS handles these now */
 }
 </style>
