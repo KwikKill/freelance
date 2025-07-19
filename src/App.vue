@@ -436,8 +436,14 @@
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <label class="form-label">Nom *</label>
+              <label
+                class="form-label"
+                for="name"
+              >
+                Nom *
+              </label>
               <input
+                id="name"
                 v-model="form.name"
                 type="text"
                 required
@@ -451,8 +457,14 @@
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <label class="form-label">Email *</label>
+              <label
+                class="form-label"
+                for="email"
+              >
+                Email *
+              </label>
               <input
+                id="email"
                 v-model="form.email"
                 type="email"
                 required
@@ -466,8 +478,14 @@
               data-aos="fade-up"
               data-aos-delay="300"
             >
-              <label class="form-label">Type de projet</label>
+              <label
+                class="form-label"
+                for="projectType"
+              >
+                Type de projet
+              </label>
               <select
+                id="projectType"
                 v-model="form.projectType"
                 name="projectType"
                 class="form-input"
@@ -484,8 +502,14 @@
               data-aos="fade-up"
               data-aos-delay="400"
             >
-              <label class="form-label">Message *</label>
+              <label
+                class="form-label"
+                for="message"
+              >
+                Message *
+              </label>
               <textarea
+                id="message"
                 v-model="form.message"
                 required
                 rows="5"
