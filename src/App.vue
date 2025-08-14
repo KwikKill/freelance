@@ -298,6 +298,39 @@
         Mes créations
       </h2>
       <div
+        class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+      >
+        <div
+          v-for="project in projects"
+          :key="project.id"
+          @click="openModal(project)"
+          class="bg-gray-800/50 rounded-2xl overflow-hidden border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 cursor-pointer hover:transform hover:scale-105"
+        >
+          <div class="aspect-video bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center overflow-hidden">
+            <img
+              :src="`${project.image}`"
+              alt="Project Image"
+              class="w-full h-auto object-cover"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 text-cyan-400">{{ project.title }}</h3>
+            <p class="text-gray-300 mb-4">{{ project.description }}</p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                v-for="tech in project.stack"
+                :key="tech"
+                class="bg-gray-700 text-xs px-2 py-1 rounded-full text-gray-300"
+              >
+                {{ tech }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--div
         class="text-center text-gray-400 portfolio-placeholder"
         data-aos="zoom-in"
         data-aos-delay="200"
@@ -317,7 +350,7 @@
           data-aos="fade-up"
           data-aos-delay="700"
         >Revenez bientôt pour découvrir mes réalisations !</p>
-      </div>
+      </div-->
       <div
         class="text-center mt-12"
         data-aos="slide-up"
@@ -556,14 +589,18 @@
     >
       <div
         @click.stop
-        class="modal-content"
+        class="modal-content flex flex-col gap-2"
       >
         <div class="flex justify-between items-start mb-6">
           <h3 class="text-2xl font-bold text-cyan-400">{{ selectedProject.title }}</h3>
           <button @click="closeModal" class="modal-close">×</button>
         </div>
-        <div class="modal-image">
-          <div class="text-8xl">{{ selectedProject.icon }}</div>
+        <div class="modal-image border border-gray-700 rounded-lg overflow-hidden mb-6">
+          <img
+            :src="`${selectedProject.image}`"
+            alt="Project Image"
+            class="w-full h-auto object-cover rounded-lg"
+          />
         </div>
         <p class="text-gray-300 mb-6">{{ selectedProject.fullDescription }}</p>
         <div class="flex flex-wrap gap-2 mb-6">
@@ -575,9 +612,15 @@
             {{ tech }}
           </span>
         </div>
-        <div class="flex space-x-4">
-          <button class="modal-button primary">Voir le site</button>
-          <button class="modal-button secondary">Code source</button>
+        <div class="flex gap-4">
+          <a
+            class="modal-button primary"
+            :href="selectedProject.link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Voir le site
+        </a>
         </div>
       </div>
     </div>
@@ -588,6 +631,7 @@
 import { ref, reactive, onMounted, onUnmounted } from 'vue'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import esport from '@/assets/projects/esportrecrutement.webp';
 
 // Initialize AOS on component mount
 onMounted(() => {
@@ -617,52 +661,13 @@ const form = reactive({
 const projects = ref([
   {
     id: 1,
-    title: 'E-commerce Mode',
-    description: 'Boutique en ligne moderne avec WooCommerce',
-    fullDescription: 'Site e-commerce complet pour une marque de mode avec gestion des stocks, paiements sécurisés et interface d\'administration intuitive.',
-    icon: '👗',
-    stack: ['WordPress', 'WooCommerce', 'PHP', 'CSS']
+    title: 'EsportRecrutement.fr',
+    description: 'SaaS de recrutement esports',
+    fullDescription: 'EsportRecrutement.fr est un site dédié au recrutement de joueurs esports.Il permet aux joueurs de créer des profils dans l\'annuaire, rechercher des équipes et de postuler à des postes dans diverses équipes esports. Le site inclus un système d\'annonces, de blog, de chat entre utilisteurs, de paiement et un panel admin complet.',
+    stack: ['Next.js', 'React', 'HTML', 'CSS', 'Tailwind CSS', 'TypeScript'],
+    image: esport,
+    link: "https://esportrecrutement.fr"
   },
-  {
-    id: 2,
-    title: 'Portfolio Architecte',
-    description: 'Site vitrine élégant pour cabinet d\'architecture',
-    fullDescription: 'Portfolio professionnel mettant en valeur les réalisations d\'un cabinet d\'architecture avec galerie interactive et formulaire de contact.',
-    icon: '🏗️',
-    stack: ['React', 'Next.js', 'Tailwind', 'Framer Motion']
-  },
-  {
-    id: 3,
-    title: 'App SaaS',
-    description: 'Application web sur mesure pour gestion de projets',
-    fullDescription: 'Application SaaS complète pour la gestion de projets avec authentification, dashboard temps réel et API REST.',
-    icon: '📊',
-    stack: ['Vue.js', 'Node.js', 'MongoDB', 'Express']
-  },
-  {
-    id: 4,
-    title: 'Restaurant Local',
-    description: 'Site vitrine avec système de réservation',
-    fullDescription: 'Site web pour restaurant local avec menu interactif, système de réservation en ligne et intégration Google Maps.',
-    icon: '🍽️',
-    stack: ['HTML', 'CSS', 'JavaScript', 'PHP']
-  },
-  {
-    id: 5,
-    title: 'Startup Tech',
-    description: 'Landing page conversion-optimisée',
-    fullDescription: 'Landing page haute conversion pour startup tech avec animations fluides, formulaires optimisés et tracking analytics.',
-    icon: '🚀',
-    stack: ['React', 'Gatsby', 'GraphQL', 'Netlify']
-  },
-  {
-    id: 6,
-    title: 'Blog Personnel',
-    description: 'Blog moderne avec CMS headless',
-    fullDescription: 'Blog personnel avec CMS headless, optimisation SEO avancée et performance maximale.',
-    icon: '✍️',
-    stack: ['Next.js', 'Strapi', 'GraphQL', 'Vercel']
-  }
 ])
 
 // Modal state
