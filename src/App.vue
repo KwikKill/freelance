@@ -422,7 +422,7 @@
           data-aos-duration="600"
         >
           <a
-            href="https://gabriel.blaisot.org/?lang=fr&version=cyberpunk&theme=default#about"
+            href="https://gabriel.blaisot.org/"
             target="_blank"
             rel="noopener noreferrer"
             class="about-button primary"
